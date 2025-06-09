@@ -96,7 +96,7 @@ const [img3] = useState(DefaultImage3);
                             </div>
                             <div class="flex flex-col py-3">
                                 <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Github</dt>
-                                <dd class="text-lg font-semibold">Male</dd>
+                                <dd class="text-lg"><a href="https://github.com/damien-martinez-hub">Lien Git</a></dd>
                             </div>
                         </dl>
                     </div>
