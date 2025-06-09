@@ -32,7 +32,7 @@ interface ChatMessage {
 }
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "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",
  dangerouslyAllowBrowser: true
 });
 
