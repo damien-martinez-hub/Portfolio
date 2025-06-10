@@ -32,7 +32,7 @@ interface ChatMessage {
 }
 
 const openai = new OpenAI({
-  apiKey: env.OPEN_AI_KEY,
+  apiKey: process.env.REACT_APP_API_KEY,
  dangerouslyAllowBrowser: true
 });
 
