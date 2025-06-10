@@ -32,7 +32,7 @@ interface ChatMessage {
 }
 
 const openai = new OpenAI({
-  apiKey: ${{env.OPEN_AI_KEY}},
+  apiKey: env.OPEN_AI_KEY,
  dangerouslyAllowBrowser: true
 });
 
