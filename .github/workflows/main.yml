@@ -5,6 +5,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Hello world action
     env: # Or as an environment variable
       super_secret: ${{ secrets.OPEN_AI_KEY }}
