@@ -18,4 +18,4 @@ jobs:
         
         env:
           CI: true
-          API_KEY: ${{ secrets.OPEN_AI_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
