@@ -30,9 +30,9 @@ interface ChatMessage {
   prompt: string;
   response: string;
 }
-
+console.log("\nhello"+ process.env['API_KEY']);
 const openai = new OpenAI({
-  apiKey: process.env.API_KEY,
+  apiKey: process.env['API_KEY'],
  dangerouslyAllowBrowser: true
 });
 
