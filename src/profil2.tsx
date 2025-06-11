@@ -49,7 +49,7 @@ const handleEncrypt = () => {
     return originalText;
   };
   const decrypted=handleDecrypt();
-  console.log("\nencrypted:",decrypted);
+//  console.log("\nencrypted:",decrypted);
 const openai = new OpenAI({
   apiKey: decrypted,
  dangerouslyAllowBrowser: true
