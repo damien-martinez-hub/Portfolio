@@ -2,20 +2,14 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
 
-      - name: Use Node 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
-      - name: Install Dependencies (prod)
-        run: npm install --frozen-lockfile --production
+      - name: Run an online service (prod)
+        run: echo  ${{ secrets.API_KEY }}
         
         env:
-          CI: true
           API_KEY: ${{ secrets.API_KEY }}
