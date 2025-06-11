@@ -10,6 +10,8 @@ jobs:
 
       - name: Run an online service (prod)
         run: echo  ${{ secrets.API_KEY }}
-        
+      - name: Run test
+        run: echo  ${{ vars.KEY_TEST }}
         env:
+          KEY_TEST: ${{ vars.KEY_TEST }}
           API_KEY: ${{ secrets.API_KEY }}
