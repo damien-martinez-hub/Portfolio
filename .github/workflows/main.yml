@@ -16,7 +16,8 @@ jobs:
       - name: Use Node 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 12.x  
+      - name: Run Tests (JEST)
         run: npm test --ci --silent --testPathIgnorePatterns=experimental
         env:
           CI: False
