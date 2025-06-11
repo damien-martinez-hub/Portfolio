@@ -15,6 +15,7 @@ import Chat from '../src/components/Chat.tsx';
 import Headings from '../src/components/Header.tsx';
 import SearchBar from '../src/components/searchBar.tsx';
 import Button from '../src/components/Button.tsx';
+import CryptoJS from "crypto-js";
 
 import {
   Card,
@@ -30,9 +31,27 @@ interface ChatMessage {
   prompt: string;
   response: string;
 }
-console.log("\ntest"+process.env.REACT_APP_APIKey);
+const secretKey ="motdp97415"; // Use a strong, secure key in production
+  const text="";
+const handleEncrypt = () => {
+
+    const ciphertext = CryptoJS.AES.encrypt(text, secretKey).toString();
+
+    return ciphertext;
+  };
+ // const encrypted_text=handleEncrypt();
+ // console.log("\nencrypted:",encrypted_text);
+  const encrypted_text="U2FsdGVkX1/3e+YNss1SOAvSYHbSrKjrUVBeMM3QA8hlWrkZ3t9gwvqKwxN71ccxE3z70CsoSSZK4X6ZVFxNX3pEhiMPcy9n4QsP4+WtXzniatgKBrNLhVINahTI38vXq5DfFCbtgrZgWn1r1d3oBlPI2tIzIw0m+DPoh3q4Ja8CmTApIuw4KJ6Ztv4AFdEW0qkfuxKTnyEzqPZ+kBm4VMgZm4HNxcW0iywTiata88bI7U1svxtlWt18jlVAimUt";
+// Decrypt the text
+  const handleDecrypt = () => {
+    const bytes = CryptoJS.AES.decrypt(encrypted_text, secretKey);
+    const originalText = bytes.toString(CryptoJS.enc.Utf8);
+    return originalText;
+  };
+  const decrypted=handleDecrypt();
+  
 const openai = new OpenAI({
-  apiKey: 'test',
+  apiKey: decrypted,
  dangerouslyAllowBrowser: true
 });
 
