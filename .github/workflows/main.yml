@@ -12,8 +12,8 @@ jobs:
         with:
           node-version: 12.x  
       - name: Run Tests
-        run: npm install crypto-js;npm run build
+        run: npm install;npm install crypto-js;npm run build
         env:
-          CI: False
+          CI: False 
           REACT_APP_APIKey: ${{ vars.REACT_APP_APIKey }}
           API_KEY: ${{ secrets.API_KEY }}
