@@ -7,12 +7,6 @@ jobs:
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
-      - name: Run test
-        run: npm install; npm run build
-        env:
-          CI: False
-          REACT_APP_APIKey: ${{ vars.REACT_APP_APIKey }}
-          API_KEY: ${{ secrets.API_KEY }}
       - name: Use Node 12.x
         uses: actions/setup-node@v1
         with:
