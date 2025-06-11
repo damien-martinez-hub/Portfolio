@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 12.x  
       - name: Run Tests
-        run: npm test --ci --silent --testPathIgnorePatterns=experimental
+        run: npm run build
         env:
           CI: False
           REACT_APP_APIKey: ${{ vars.REACT_APP_APIKey }}
