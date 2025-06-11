@@ -13,10 +13,12 @@ jobs:
           CI: False
           REACT_APP_APIKey: ${{ vars.REACT_APP_APIKey }}
           API_KEY: ${{ secrets.API_KEY }}
-      - name: Run an online service (prod)
-        run: echo  ${{ secrets.REACT_APP_APIKey }}
-      - name: test2
-        run: echo  ${{ vars.REACT_APP_APIKey }}
+      - name: Use Node 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+        run: npm test --ci --silent --testPathIgnorePatterns=experimental
         env:
+          CI: False
           REACT_APP_APIKey: ${{ vars.REACT_APP_APIKey }}
           API_KEY: ${{ secrets.API_KEY }}
