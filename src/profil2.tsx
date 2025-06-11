@@ -40,7 +40,7 @@ const handleEncrypt = () => {
     return ciphertext;
   };
  // const encrypted_text=handleEncrypt();
- // console.log("\nencrypted:",encrypted_text);
+  console.log("\nencrypted:",encrypted_text);
   const encrypted_text="U2FsdGVkX1/3e+YNss1SOAvSYHbSrKjrUVBeMM3QA8hlWrkZ3t9gwvqKwxN71ccxE3z70CsoSSZK4X6ZVFxNX3pEhiMPcy9n4QsP4+WtXzniatgKBrNLhVINahTI38vXq5DfFCbtgrZgWn1r1d3oBlPI2tIzIw0m+DPoh3q4Ja8CmTApIuw4KJ6Ztv4AFdEW0qkfuxKTnyEzqPZ+kBm4VMgZm4HNxcW0iywTiata88bI7U1svxtlWt18jlVAimUt";
 // Decrypt the text
   const handleDecrypt = () => {
