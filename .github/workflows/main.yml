@@ -9,9 +9,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run an online service (prod)
-        run: echo  ${{ secrets.API_KEY }}
+        run: echo  ${{ secrets.REACT_APP_APIKey }}
       - name: Run test
-        run: echo  ${{ vars.KEY_TEST }}
+        run: echo  ${{ vars.REACT_APP_APIKey }}
         env:
-          KEY_TEST: ${{ vars.KEY_TEST }}
+          REACT_APP_APIKey: ${{ vars.REACT_APP_APIKey }}
           API_KEY: ${{ secrets.API_KEY }}
