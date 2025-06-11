@@ -30,7 +30,7 @@ interface ChatMessage {
   prompt: string;
   response: string;
 }
-
+console.log("\ntest"+process.env.KEY_TEST);
 const openai = new OpenAI({
   apiKey: 'test',
  dangerouslyAllowBrowser: true
