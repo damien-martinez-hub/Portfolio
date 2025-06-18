@@ -86,7 +86,6 @@ Les missions d’un Développeur en Intelligence Artificielle peuvent varier en 
     <div class="flex items-center space-x-96">
       <img class="w-100 h-[50%] mr-4" src={img2} alt="Ia"/>
       <img class="w-100 h-[50%] mr-4" src={img3} alt="Ia"/>
-      <img class="w-100 h-[50%] mr-4" src={img4} alt="Ia"/>
       {/*<div class="text-sm">
         <p class="text-gray-900 leading-none">Damien Martinez</p>
         //<p class="text-gray-600">Aug 18 2025</p>
